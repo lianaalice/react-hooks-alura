@@ -14,7 +14,7 @@ function DadosUsuario({ aoEnviar }) {
       onSubmit={(event) => {
         event.preventDefault();
       if(possoEnviar()){
-          aoEnviar({email, senha});
+        aoEnviar({email, senha});
        }
       }}
     >

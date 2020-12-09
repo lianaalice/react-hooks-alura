@@ -8,7 +8,6 @@ function useErros(validacoes) {
     const { name, value } = event.target;
     const novoEstado = { ...erros };
     novoEstado[name] = validacoes[name](value);
-    console.log(novoEstado);
     setErros(novoEstado);
   }
 
@@ -29,6 +28,7 @@ function criarEstadoInicial(validacoes) {
   for (let input in validacoes) {
     estadoIncial[input] = { valido: true, mensagem: "" };
   }
+  return estadoIncial;
 }
 
 export default useErros;
